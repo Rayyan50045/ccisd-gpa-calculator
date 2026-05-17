@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GPA Calculator</title>
+
+    <style>
+
+        .heading {
+            color:rgb(23, 63, 102);
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .main-body {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 450px;
+            margin: 0 auto;
+            box-shadow: 1px 1px 1px;
+            background-color: aliceblue;
+            
+        }
+
+        .labels {
+            font-size: 20px;
+        }
+
+        .inputs {
+            padding: 7px;
+            padding-right: 250px;
+            background-color: rgb(206, 233, 245);
+        }
+
+        .Calculate-button {
+            padding: 10px;
+            font-size: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: rgb(64, 110, 150);
+            border-radius: 15px;
+            color: white;
+            transition: opacity 0.6s; padding-right: 0.7s;
+        }
+
+        .Calculate-button:hover {
+            opacity: 0.7;
+            box-shadow: 0 7px 7px rgba(0, 0, 0, 0.15);
+            padding-right: 35px;
+        }
+
+        .Calculate-button:active {
+            opacity: 0.1;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            display: block;
+
+             height: 100%;
+             width: 100%;
+
+            z-index: -1;
+
+             background-image: url('https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=1920');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+
+             opacity: 0.2;
+}
+
+
+        .Final {
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+
+    </style>
+</head>
+
+
+
+<body>
+
+    <img src="" alt="">
+    <img src="" alt="">
+
+    <h1 class="heading">CCISD GPA Calculator</h1>
+
+    <form method="POST">
+
+        <div class="main-body">
+        <label class="labels">Enter grades separated by commas:</label>
+        <br>
+        <br>
+        <input class="inputs" type="text" name="grades" placeholder="e.g. 95,87,100">
+        <br><br>
+
+        <label class="labels">Are you taking all level 1 courses (Honors, AP, IB)? </label>
+        <br>
+        <br>
+        <input class="inputs" type="text" name="honors" placeholder="Yes/No">
+        <br><br>
+
+        <button class="Calculate-button" type="submit">Calculate</button>
+        <br>
+        <br>
+
+        <label class="Final">Calculated GPA: {{ gpa }}</label>
+
+        </div>
+
+    </form>
+
+
+
+</body>
+
+</html>
